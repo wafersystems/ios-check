@@ -1,0 +1,4 @@
+[catalyst]
+wkj ansible_host=192.168.10.171 ansible_user="wkj" ansible_password="Wafer!234" ansible_connection=network_cli ansible_network_os=ios ansible_become=yes ansible_become_method=enable ansible_become_pass="Wafer!2345"
+michael ansible_host=192.168.12.252 ansible_user="wkj" ansible_password="Wafer.234" ansible_connection=network_cli ansible_network_os=ios ansible_become=yes ansible_become_method=enable ansible_become_pass="WaferSH20!8"
+jack ansible_host=192.168.12.253 ansible_user="wkj" ansible_password="Wafer@234" ansible_connection=network_cli ansible_network_os=ios ansible_become=yes ansible_become_method=enable ansible_become_pass="WaferSH20!8"

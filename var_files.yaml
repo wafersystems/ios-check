@@ -1,0 +1,12 @@
+catalyst_command:
+  ver: show ver
+  inventory: show inventory
+  vlan_brief: show vlan brief
+  ip_int_br: show ip int br
+  int_status: show int status
+  cdp_nei: show cdp nei
+  ip_rout: show ip rout
+  proce_cpu: show proce cpu
+  proce_memor: show proce memor
+  logg: show logg
+  module: show module

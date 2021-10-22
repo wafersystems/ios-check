@@ -1,0 +1,52 @@
+---
+- name: Cisco ios switch check
+  hosts: catalyst
+  connection: local
+  gather_facts: no
+  vars_files:
+    - var_files.yaml
+  tasks:
+    - name: Backup current switch config (ios)
+      ios_config:
+        backup: yes
+
+    - name: Run Cisco catalyst switch check commands.
+      ios_command:
+        commands: "{{ item }}"
+      loop: 
+        - "{{ catalyst_command.ver }}"
+        - "{{ catalyst_command.inventory }}"
+        - "{{ catalyst_command.vlan_brief }}"
+        - "{{ catalyst_command.ip_int_br }}"
+        - "{{ catalyst_command.int_status }}"
+        - "{{ catalyst_command.cdp_nei }}"
+        - "{{ catalyst_command.ip_rout }}"
+        - "{{ catalyst_command.proce_cpu }}"
+        - "{{ catalyst_command.proce_memor }}"
+        - "{{ catalyst_command.logg }}"
+        - "{{ catalyst_command.module }}"
+      ignore_errors: yes
+      register: catalyst
+
+    - debug: 
+        var: catalyst.results[0].stdout_lines   # 0 - show ver
+    - debug: 
+        var: catalyst.results[1].stdout_lines   # 1 - show inventory 
+    - debug: 
+        var: catalyst.results[2].stdout_lines   # 2 - show vlan brief
+    - debug: 
+        var: catalyst.results[3].stdout_lines   # 3 - show ip int br
+    - debug: 
+        var: catalyst.results[4].stdout_lines   # 4 - show int status
+    - debug: 
+        var: catalyst.results[5].stdout_lines   # 5 - show cdp nei
+    - debug: 
+        var: catalyst.results[6].stdout_lines   # 6 - show ip rout
+    - debug: 
+        var: catalyst.results[7].stdout_lines   # 7 - show proce cpu
+    - debug: 
+        var: catalyst.results[8].stdout_lines   # 8 - show proce memor
+    - debug: 
+        var: catalyst.results[9].stdout_lines   # 9 - show logg
+    - debug: 
+        var: catalyst.results[10].stdout_lines  # 10 - show module
