@@ -1,16 +1,23 @@
-# Cisco交换机巡检
+# Cisco ios switch check
+
+This is a simple example.
+
+Batch inspection of Cisco switches using `Ansible`.
+
+## DevNet Code Exchange
+This repository is featured on the Cisco DevNet Code Exchange.
 
 [![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/wafersystems/ios-check)
 
-通过Ansible进行Cisco批量巡检。
 
-使用方法：
 
-1. 修改和增加交换机信息
+## Run and test
 
-  在文件`inventory`中增加和修改交换机信息，包括`IP`，`登录名`和`密码`
+1. Add switch info
 
-2. 执行 
+  Modify the file `inventory`, replace `<host_ipx>`, `<username>`, `<password>`, and `<become_pass>`
+
+2. Run 
 ```
 $> ansible-playbook ios-check.yaml
 ```
