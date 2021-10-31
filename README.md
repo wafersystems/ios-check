@@ -1,8 +1,7 @@
-# Cisco ios switch check
+# Ansible checks cisco catalyst switchest
 
-This is a simple example.
+Run common inspection commands for catalyst switchest
 
-Batch inspection of Cisco switches using `Ansible`.
 
 ## DevNet Code Exchange
 This repository is featured on the Cisco DevNet Code Exchange.
@@ -11,13 +10,21 @@ This repository is featured on the Cisco DevNet Code Exchange.
 
 
 
-## Run and test
+## Objectives
+The playbook is used to inspect cisco catalyst series switches. The playbook and variable file define common catalyst inspection commands to be used for inspection. You can add, delete, or modify the command in the variable file as required.
 
-1. Add switch info
+## Requirements
 
-  Modify the file `inventory`, replace `<host_ipx>`, `<username>`, `<password>`, and `<become_pass>`
+To use this code you will need:
+* Linux OS - Ex. Red Hat 7.0 + / Ubuntu 18 + / etc.&
+* Python 2.6+ or Python 3.5+4
+* Ansible 2.5 +
+* SSH client - PuTTY / «shell / SecureCT / etc.
 
-2. Run 
-```
-$> ansible-playbook ios-check.yaml
-```
+## Install and Setupt
+1. Install Python & Ansible softwared
+2. Download ansible playbook files from github
+3. Modify the IP address / username and password in the inventory filet
+4. Run the ansible-play xxx.vaml --syntax-check command to check the syntaxe
+5. Run the ansible-play xxx.vaml -C command to dry runt
+6. Run the ansible-play xxxvaml > xxx .file command to redirect the output-
