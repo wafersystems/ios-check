@@ -25,6 +25,6 @@ To use this code you will need:
 1. Install `Python` & `Ansible` softwared
 2. Download ansible playbook files from `github`
 3. Modify the `IP` address, `username` and `password` in the inventory file
-4. Run the `ansible-play xxx.vaml --syntax-check` command to check the syntax
-5. Run the `ansible-play xxx.vaml -C` command to dry run
-6. Run the `ansible-play xxxvaml > xxx .file` command to redirect the output
+4. Run the `ansible-play xxx.yaml --syntax-check` command to check the syntax
+5. Run the `ansible-play xxx.yaml -C` command to dry run
+6. Run the `ansible-play xxx.yaml > xxx.file` command to redirect the output
